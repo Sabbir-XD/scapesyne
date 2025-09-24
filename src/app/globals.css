@@ -51,3 +51,22 @@ body {
   /* Horizontal first, vertical second */
   background-position: calc(50% + 100px) bottom; /* center + 50px right, bottom aligned */
 }
+
+.background-footer {
+  background-image: 
+    url("https://i.ibb.co.com/8FVZb3c/Vector-3.png"),
+    url("https://i.ibb.co.com/4kMtdXz/Vector-2.png"),
+    url("https://i.ibb.co.com/0R9PCYd1/Vector-4.png");
+
+  /* image size individually */
+  background-size: 250px auto, 250px auto, 80px auto;
+
+  /* image position individually */
+  background-position: top right, bottom right 150px, bottom right;
+
+  /* no-repeat for all */
+  background-repeat: no-repeat, no-repeat, no-repeat;
+
+ 
+}
+
