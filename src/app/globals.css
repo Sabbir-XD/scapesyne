@@ -42,3 +42,12 @@ body {
 
   background-repeat: no-repeat, no-repeat;
 }
+
+.build-for-everyone {
+  background-image: url("https://i.ibb.co.com/DD41MSL6/Frame-2147227474.png");
+  background-size: 200px auto;
+  background-repeat: no-repeat;
+
+  /* Horizontal first, vertical second */
+  background-position: calc(50% + 100px) bottom; /* center + 50px right, bottom aligned */
+}
