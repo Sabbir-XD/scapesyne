@@ -44,18 +44,69 @@ const cards = [
 
 export default function BuildForEveryone() {
   return (
-    <section className="px-4 md:px-12 py-16">
+    <section className="px-4 md:px-12 py-16 relative">
+      {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#212B36] pb-2 build-for-everyone">
           Build for Everyone
         </h2>
         <p className="text-sm sm:text-base text-gray-600 mt-4">
-          Whether you're booking services, managing tasks, or running
-          operations, we've designed the perfect experience for you.
+          Whether you&apos;re booking services, managing tasks, or running
+          operations,
+          <br /> we&apos;ve designed the perfect experience for you.
         </p>
       </div>
 
-      <div className="flex flex-col gap-20">
+      {/* User Arrow */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <Image
+          src={"https://i.ibb.co/tppfCwTb/arrow-user-dfklm1.png"}
+          width={221}
+          height={124}
+          alt="User Arrow"
+          className="absolute left-30 top-45 hidden lg:block"
+        />
+      </motion.div>
+
+      {/* Employee Arrows */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+        viewport={{ once: true }}
+      >
+        <Image
+          src={"https://i.ibb.co/608PvSdb/arrow-busineess-otzzat.png"}
+          width={341.54}
+          height={1253.11}
+          alt="Employee Arrow"
+          className="absolute left-85 top-34 z-50 hidden lg:block"
+        />
+      </motion.div>
+
+      {/* Business Owner Arrows */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        viewport={{ once: true }}
+      >
+        <Image
+          src={"https://i.ibb.co/21c6nPVG/arrow-employee-g454cn.png"}
+          width={308.35}
+          height={732.28}
+          alt="Employee Arrow"
+          className="absolute -right-20 top-40 z-50 hidden lg:block"
+        />
+      </motion.div>
+
+      {/* Cards */}
+      <div className="flex flex-col gap-20 mt-20">
         {cards.map((card, index) => (
           <motion.div
             key={index}
@@ -67,9 +118,9 @@ export default function BuildForEveryone() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Text */}
+            {/* Text Content */}
             <div className="w-full md:w-1/2 flex flex-col">
-              <p className="">
+              <p>
                 <span className="text-green-600 border border-green-600 rounded-2xl font-semibold text-sm px-3 py-1">
                   {card.title}
                 </span>
@@ -93,7 +144,7 @@ export default function BuildForEveryone() {
               </div>
             </div>
 
-            {/* Image */}
+            {/* Image Content */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <Image
                 src={card.image}

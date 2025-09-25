@@ -15,7 +15,7 @@ export default function Banner() {
         transition={{ duration: 0.8 }}
       >
         <div className="background">
-          <h1 className="text-3xl sm:text-4xl md:text-[84px] font-bold text-[#212B36] pt-12 pb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-[80px] font-bold text-[#212B36] pt-12 pb-4">
             All Your Jobs One Smart App
           </h1>
         </div>

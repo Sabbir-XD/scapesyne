@@ -6,9 +6,9 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F3B34] py-16 px-4 md:px-12 background-footer">
-      <div className="w-11/12 mx-auto">
-        <div className=" flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-5">
+    <footer className="relative bg-[#0F3B34] py-16 px-4 md:px-12 background-footer overflow-hidden">
+      <div className="relative w-11/12 mx-auto z-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-5">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Image
@@ -45,28 +45,13 @@ export default function Footer() {
             />
           </div>
         </div>
+
         {/* Social Icons */}
         <div className="flex justify-center md:justify-start gap-6 mt-20">
-          <FaYoutube
-            size={24}
-            color="white"
-            className="hover:text-gray-300 transition-colors"
-          />
-          <FaXTwitter
-            size={24}
-            color="white"
-            className="hover:text-gray-300 transition-colors"
-          />
-          <FaFacebook
-            size={24}
-            color="white"
-            className="hover:text-gray-300 transition-colors"
-          />
-          <FaInstagram
-            size={24}
-            color="white"
-            className="hover:text-gray-300 transition-colors"
-          />
+          <FaYoutube size={24} color="white" className="hover:text-gray-300" />
+          <FaXTwitter size={24} color="white" className="hover:text-gray-300" />
+          <FaFacebook size={24} color="white" className="hover:text-gray-300" />
+          <FaInstagram size={24} color="white" className="hover:text-gray-300" />
         </div>
       </div>
     </footer>
