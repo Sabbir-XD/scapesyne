@@ -3,6 +3,11 @@
 A **full-stack web application** built for **Softove Agency**, converting Figma designs into a responsive Next.js application.  
 The project includes a **complete authentication system** with API integration and dynamic UI components.
 
+---
+
+![alt text](image.png)
+
+
 🔗 **Live Demo:** [https://scapesyne.vercel.app/](https://scapesyne.vercel.app/)
 
 ---
