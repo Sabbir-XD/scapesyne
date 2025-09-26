@@ -85,7 +85,7 @@ export default function BuildForEveryone() {
           width={341.54}
           height={1253.11}
           alt="Employee Arrow"
-          className="absolute left-85 top-34 z-50 hidden lg:block"
+          className="absolute left-70 top-34 z-50 hidden lg:block"
         />
       </motion.div>
 
@@ -101,7 +101,7 @@ export default function BuildForEveryone() {
           width={308.35}
           height={732.28}
           alt="Employee Arrow"
-          className="absolute -right-20 top-40 z-50 hidden lg:block"
+          className="absolute right-0 top-40 z-50 hidden lg:block"
         />
       </motion.div>
 

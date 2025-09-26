@@ -53,6 +53,9 @@ export default function Footer() {
           <FaFacebook size={24} color="white" className="hover:text-gray-300" />
           <FaInstagram size={24} color="white" className="hover:text-gray-300" />
         </div>
+        <div>
+          <p>© 2021-2025, ScapeSync. All Rights Reserved.</p>
+        </div>
       </div>
     </footer>
   );
