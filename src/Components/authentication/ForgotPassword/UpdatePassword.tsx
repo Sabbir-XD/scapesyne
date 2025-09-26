@@ -4,14 +4,12 @@ import { useRouter } from "next/navigation";
 import { IoIosEye, IoMdEyeOff } from "react-icons/io";
 import toast from "react-hot-toast";
 
-
 export default function UpdatePassword() {
   const [showPass, setShowPass] = useState(false);
   const [token, setToken] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  // Access sessionStorage only on client
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedToken = sessionStorage.getItem("resetToken");
@@ -19,12 +17,12 @@ export default function UpdatePassword() {
     }
   }, []);
 
-  const handlePassShowToggle = (e) => {
+  const handlePassShowToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setShowPass(!showPass);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!token) {
@@ -33,8 +31,10 @@ export default function UpdatePassword() {
     }
 
     const formData = new FormData(e.currentTarget);
-    const password = formData.get("password");
-    const confirmPassword = formData.get("confirmPassword");
+
+    // ✅ Cast safely to string
+    const password = formData.get("password") as string | null;
+    const confirmPassword = formData.get("confirmPassword") as string | null;
 
     // Validation
     if (!password || !confirmPassword) {
@@ -74,12 +74,10 @@ export default function UpdatePassword() {
       if (response.ok) {
         toast.success("Password updated successfully!", { id: loadingToast });
 
-        // Clear the reset token from sessionStorage
         if (typeof window !== "undefined") {
           sessionStorage.removeItem("resetToken");
         }
 
-        // Redirect to login page after a short delay
         setTimeout(() => {
           router.push("/UpdatePassword/success");
         }, 2000);

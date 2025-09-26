@@ -130,7 +130,7 @@ export default function LoginForm() {
 
       {/* Register */}
       <p className="mt-6 text-sm sm:text-base text-center text-[#212B36]">
-        Don't have an account?{" "}
+        Don&apos;t have an account?{" "}
         <Link
           href="/Register"
           className="text-[#49AE44] font-semibold hover:text-[#3e8e3a] transition-colors duration-200"

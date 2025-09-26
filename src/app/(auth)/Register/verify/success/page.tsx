@@ -19,10 +19,10 @@ export default function RegistrationSuccess() {
         Your account is set up! Just verify your email to get started.
       </p>
       <Link
-        href={"/"}
+        href={"/Login"}
         className="block text-center mt-10 w-full py-3 bg-[#49AE44] rounded-lg text-white font-bold cursor-pointer hover:bg-[#3e8e3a] transition-colors duration-200"
       >
-        Go to Home
+        Go to Login
       </Link>
     </div>
   );

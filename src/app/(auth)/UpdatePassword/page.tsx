@@ -1,5 +1,4 @@
 import Link from "next/link";
-import UpdatePasswordForm from "../../components/Authentication/ResetPassword/UpdatePasswrodForm";
 import { IoIosArrowBack } from "react-icons/io";
 import UpdatePassword from "@/Components/authentication/ForgotPassword/UpdatePassword";
 

@@ -16,7 +16,7 @@ export default function VerifyRegistration() {
       </Link>
       <h1 className="text-[#212B36] text-2xl font-bold mb-2">Please check your email!</h1>
       <p className="text-[#637381]">
-        We've emailed a 6-digit confirmation code to <span className="font-semibold">{email}</span>, please enter the code below to verify your email.
+        We&apos;ve emailed a 6-digit confirmation code to <span className="font-semibold">{email}</span>, please enter the code below to verify your email.
       </p>
       <RegisterVerify email={email} />
     </div>

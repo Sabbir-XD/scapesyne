@@ -9,7 +9,10 @@ export default function ForgotPassVerify() {
   const [codes, setCodes] = useState(["", "", "", "", "", ""]);
   const [loading, setLoading] = useState(false);
   const [resendLoading, setResendLoading] = useState(false);
-  const inputRefs = useRef([]);
+
+  // ✅ inputRefs এর proper type declare করা হলো
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -19,7 +22,7 @@ export default function ForgotPassVerify() {
     }
   }, [searchParams]);
 
-  const handleChange = (index, value) => {
+  const handleChange = (index: number, value: string) => {
     if (value && !/^\d$/.test(value)) return;
 
     const newCodes = [...codes];
@@ -39,7 +42,10 @@ export default function ForgotPassVerify() {
     }
   };
 
-  const handleKeyDown = (index, e) => {
+  const handleKeyDown = (
+    index: number,
+    e: React.KeyboardEvent<HTMLInputElement>
+  ) => {
     if (e.key === "Backspace") {
       if (!codes[index] && index > 0) {
         inputRefs.current[index - 1]?.focus();
@@ -166,10 +172,12 @@ export default function ForgotPassVerify() {
           {codes.map((code, index) => (
             <input
               key={index}
-              ref={(el) => (inputRefs.current[index] = el)}
+              ref={(el) => {
+                inputRefs.current[index] = el;
+              }}
               type="text"
               inputMode="numeric"
-              maxLength="1"
+              maxLength={1}
               value={code}
               disabled={loading}
               onChange={(e) => handleChange(index, e.target.value)}
@@ -208,7 +216,7 @@ export default function ForgotPassVerify() {
         </button>
 
         <p className="text-center text-sm text-gray-600">
-          Didn't receive code?{" "}
+          Didn&apos;t receive code?{" "}
           <button
             onClick={handleResendCode}
             disabled={resendLoading || loading}
