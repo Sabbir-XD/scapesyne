@@ -9,7 +9,7 @@ import UserComments from "@/Components/sections/UserComments";
 export default function Home() {
   return (
     <main>
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 lg:max-w-7xl mx-auto">
         <Navbar />
         <Banner />
         <Features />

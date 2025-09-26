@@ -25,7 +25,7 @@ export default function Loading() {
 
       {/* Cute Text */}
       <p className="mt-8 text-gray-600 font-medium animate-pulse">
-        🌸 Just a moment... your garden is loading!
+        🌸 Just a moment... your app is loading!
       </p>
 
       {/* Extra style animations */}

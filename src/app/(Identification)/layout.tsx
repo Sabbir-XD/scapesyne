@@ -9,14 +9,19 @@ const publicSans = Public_Sans({
 });
 
 export const metadata = {
-  title: "ScapeSync",
-  description:
-    "Built for business owners, employees, and clients streamline job scheduling, service tracking, and team management in one powerful app.",
+  title: "Identification | ScapeSync",
+  description: "client & Businesses can login and register to access ScapeSync",
 };
 
-export default function IdentificationLayout({ children }: { children: React.ReactNode }) {
+export default function IdentificationLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <main className={`${publicSans.variable} min-h-[calc(100vh-80px)] mx-auto max-w-7xl flex justify-center items-center`}>
+    <main
+      className={`${publicSans.variable} min-h-[calc(100vh-80px)] mx-auto max-w-7xl flex justify-center items-center`}
+    >
       {children}
     </main>
   );

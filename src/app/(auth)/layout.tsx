@@ -21,11 +21,13 @@ export default function AuthLayout({
 }) {
   return (
     <div className={`${publicSans.variable}`}>
-      <NavLogo />
       {/* Auth Card */}
-      <div className="min-h-[calc(100vh-80px)] mx-auto max-w-11/12 py-10 lg:py-0 lg:max-w-7xl flex justify-center items-center">
+      <div className="min-h-[calc(100vh-55.91px)]">
+        <NavLogo />
         {/* Auth Card Content */}
-        {children}
+        <div className="max-w-11/12 lg:max-w-7xl  mx-auto py-10 lg:py-0 flex justify-center items-center">
+          {children}
+        </div>
       </div>
     </div>
   );
