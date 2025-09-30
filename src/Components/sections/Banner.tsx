@@ -63,6 +63,8 @@ export default function Banner() {
           height={665}
           className="w-full h-auto max-w-md md:max-w-full"
         />
+        <div className="absolute bottom-0 left-0 right-0 w-[720px] h-[500px] bg-[#9DFF99]/20 blur-[120px] rounded-full hidden lg:block"></div>
+
         <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-white to-transparent z-20"></div>
       </motion.div>
     </section>
